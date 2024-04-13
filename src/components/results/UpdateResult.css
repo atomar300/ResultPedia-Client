@@ -1,0 +1,77 @@
+.add-form-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.add-form-container h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.special-form-group {
+    margin: 20px;
+    width: 50vw;
+    padding: 1vmax;
+
+}
+
+.special-form-group label {
+    padding: 1vmax;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2vmax;
+    background-color: #e7e7e7;
+    color: black;
+    box-sizing: border-box;
+}
+
+.special-form-group label select {
+    border-radius: 8px;
+    font-size: 1.2vmax;
+    padding: 1px;
+    background-color: #f2f2f2;
+}
+
+.result-update-button {
+    padding: 0.7vmax;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vmax;
+    border-radius: 8px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .add-form-container h3 {
+        font-size: 25px;
+    }
+
+
+    .special-form-group{
+        width: 80vw;
+    }
+
+    .special-form-group label {
+        padding: 2vmax;
+        font-size: 2vmax;
+    }
+
+    .special-form-group label select {
+        width: 20vmax;
+        font-size: 2vmax;
+    }
+
+    .result-update-button {
+        padding: 1vmax;
+        font-size: 2vmax;
+    }
+
+}

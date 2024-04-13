@@ -1,0 +1,46 @@
+.loading {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  place-items: center;
+}
+
+
+.loading > div {
+  margin: 2vmax;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgb(50, 50, 50);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .loading div {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}

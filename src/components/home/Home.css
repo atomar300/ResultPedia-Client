@@ -1,0 +1,44 @@
+.home-container {
+    background-image: url('./vasily-koloda-8CqDvPuo_kI-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container div {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .home-container h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .home-container h2 {
+    color: white;
+    font-size: 24px;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .home-container div {
+      width: 80%;
+      padding: 10px;
+    }
+
+    .home-container h1 {
+      font-size: 25px;
+    }
+    
+    .home-container h2 {
+      font-size: 15px;
+    }
+}

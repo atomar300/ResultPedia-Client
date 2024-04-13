@@ -1,0 +1,82 @@
+.add-form-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.add-form-container h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 20vw;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5vmax;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2vmax;
+    background-color: #e7e7e7;
+    color: black;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.400);
+}
+
+.login-signup-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1vmax;
+}
+
+.login-signup-text a{
+    text-decoration: none;
+}
+
+
+.login-signup-button {
+    width: auto;
+    padding: 0.7vmax;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vmax;
+    border-radius: 8px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .add-form-container h3 {
+        font-size: 25px;
+    }
+
+    .form-group {
+        width: 50vw;
+    }
+
+    .form-group input {
+        padding: 1.5vmax;
+        font-size: 2vmax;
+    }
+
+    .login-signup-button{
+        padding: 1vmax;
+        font-size: 2.5vmax;
+    }
+
+}

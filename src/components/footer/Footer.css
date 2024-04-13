@@ -1,0 +1,60 @@
+footer {
+  background-color: rgb(50, 50, 50);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  padding: 1vmax;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.social-media-icons a {
+  padding: 0.5vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  margin: 1vmax;
+  border-radius: 50%;
+}
+
+.social-media-icons a svg {
+  font-size: 3vmax;
+  color: rgb(50, 50, 50);
+}
+
+.social-media-icons a:hover {
+  background-color: rgb(50, 50, 50);
+  transition: 0.5s;
+}
+
+.social-media-icons a:hover svg {
+  color: white;
+  transition: 0.5s;
+}
+
+.footer-text {
+  text-align: center;
+  padding-bottom: 1vmax;
+}
+
+.footer-text p {
+  color: white;
+}
+
+@media (max-width: 700px) {
+.social-media-icons a {
+    padding: 8px;
+    margin: 4px;
+  }
+}
