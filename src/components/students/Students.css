@@ -18,6 +18,31 @@
     border-radius: 8px;
 }
 
+.filter-container{
+    margin-bottom: 2vmax;
+}
+
+.filter-container > p{
+    font-size: 1vmax;
+}
+
+.filter-container input {
+    width: 100%;
+    padding: 0.3vmax;
+    border-radius: 8px;
+    border: none;
+    font-size: 1vmax;
+    background-color: #e7e7e7;
+    color: black;
+    box-sizing: border-box;
+}
+
+.filter-container input:focus {
+    outline: none;
+    box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.400);
+}
+
+
 table {
     position: relative;
     border-collapse: collapse;
@@ -75,6 +100,15 @@ tr:hover {
 
     .add-link {
         padding: 1.5vmax;
+    }
+    
+    .filter-container > p{
+        font-size: 2.5vmax;
+    }
+    
+    .filter-container input {
+        padding: 1.1vmax;
+        font-size: 2.5vmax;
     }
 
     .table-container {

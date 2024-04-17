@@ -14,20 +14,20 @@ const Students = () => {
     const { loading, students, error } = useSelector(state => state.students);
 
     const [search, setSearch] = useState('');
-    const [newStudents, setNewStudents] = useState([]);
+    const [filteredStudent, setFilteredStudent] = useState([]);
 
     const searchHandler = (e) => {
         const value = e.target.value;
         setSearch(value);
-        const filteredStudent = students.filter(s =>
-            s.firstName.match(new RegExp(value, "gi")) || s.familyName.match(new RegExp(value, "gi"))
+        const filtered = students.filter(s =>
+            s.firstName.match(new RegExp(value.trim(), "gi")) || s.familyName.match(new RegExp(value.trim(), "gi"))
         );
-        setNewStudents(filteredStudent);
+        setFilteredStudent(filtered);
     }
 
     useEffect(() => {
         if (students) {
-            setNewStudents(students);
+            setFilteredStudent(students);
         }
     }, [students])
 
@@ -55,22 +55,17 @@ const Students = () => {
                     <div className='table-container'>
                         <Link className='add-link' to="/student/add">Add Student</Link>
 
-                        <div>
-                            Name filter:
+                        <div className='filter-container'>
+                            <p>Name Filter:</p>
                             <input
                                 type="text"
-                                placeholder='search...'
+                                placeholder='Search By Name...'
                                 value={search}
                                 onChange={e => searchHandler(e)}
                             />
-                            {
-                                newStudents?.map(s => (
-                                    <div key={s.id}>{s.firstName}</div>
-                                ))
-                            }
                         </div>
 
-                        {students && students.length !== 0 ? (
+                        {filteredStudent && filteredStudent.length !== 0 ? (
                             <table>
                                 <thead>
                                     <tr id="header">
@@ -82,7 +77,7 @@ const Students = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {students?.map(student => (
+                                    {filteredStudent?.map(student => (
                                         <tr key={student.id}>
                                             <td>{student.firstName}</td>
                                             <td>{student.familyName}</td>
@@ -100,7 +95,7 @@ const Students = () => {
                             </table>
                         ) : (
                             <div>
-                                No students have been added yet. Click the "Add" button to add students.
+                                <p>No student in the list :(</p>
                             </div>
                         )}
                     </div>

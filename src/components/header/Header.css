@@ -2,29 +2,42 @@
     background-color: rgb(50, 50, 50);
     height: 70px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
+    padding: 0.5vmax 3vmax;
+}
+
+.navbar > div:first-child {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 3vmax;
+}
+
+.navbar > div:last-child{
+    display: flex;
+    justify-content:flex-end;
     align-items: center;
 }
 
 .logo{
-    font-size: 1.5rem;
-    margin-left: 2vmax;
+    font-size: 1.8rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
 }
 
-.header-links{
-    color: white;
-    margin-left: 2vmax;
+.navbar > div:first-child > svg{
+    font-size: 2vmax;
 }
 
-.menu-bars {
-    margin-left: 2vmax;
-    background: none;
+.header-links{
     color: white;
+    text-decoration: none;
     cursor: pointer;
-    font-size: 2vmax;
+    font-size: 18px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 
@@ -43,7 +56,7 @@
 
 .nav-menu.active {
     left: 0;
-    transition: 350ms;
+    transition: 550ms;
 }
 
 .nav-menu-items {
@@ -52,29 +65,26 @@
     justify-content: start;
     flex-direction: column;
     width: 100%;   
-    padding: 1.5vmax;
+    padding: 1.2vmax;
 }
 
 
 .nav-menu-items li {
     list-style: none;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .nav-menu-items li a{
     color: white;
     text-decoration: none;
+    padding: 1vmax;
     display: block;
-    padding: 1vmax 0.5vmax;
+    padding: 0.8vmax 0.5vmax;
 }
 
 .nav-menu-items li svg {
-    margin-left: 0.2vmax;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 8px;
+    border: 1px solid white;
+    margin: 0.5vmax 0.5vmax;
     font-size: 2vmax;
     cursor: pointer;
 }
@@ -87,7 +97,20 @@
 @media (max-width: 700px){
 
     .navbar {
-        height: 50px;
+        height: 60px;
+        padding: 0.2vmax 1.5vmax;
+    }
+
+    .logo{
+        font-size: 1.6rem;
+    }
+
+    .navbar > div:first-child > svg{
+        font-size: 4.5vmax;
+    }
+
+    .header-links{
+        font-size: 15px;
     }
 
     .nav-menu{
@@ -96,7 +119,7 @@
     }
 
     .nav-menu-items li svg {
-        font-size: 3vmax;
+        font-size: 4vmax;
     }
 
     .menu-bars{

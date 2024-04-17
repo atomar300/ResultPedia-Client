@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
     <ToastContainer position="bottom-center" autoClose={4000} />
-    <Toaster position="top-right" />
+    <Toaster position="bottom-center" />
     <App />
   </Provider>
 );

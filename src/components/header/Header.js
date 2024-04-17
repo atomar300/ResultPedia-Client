@@ -12,7 +12,7 @@ import toast from 'react-hot-toast';
 
 const Header = () => {
     const dispatch = useDispatch();
-    
+
     const { isAuthenticated } = useSelector((state) => state.user);
 
     const [sidebar, setSidebar] = useState(false);
@@ -27,17 +27,17 @@ const Header = () => {
     return (
         <div>
             <div className='navbar'>
-                <MenuIcon className='menu-bars' onClick={showSidebar} />
+                <div>
+                    <MenuIcon className='header-links' onClick={showSidebar} />
 
-                <Link to="/" className="logo">
-                    ResultPedia
-                </Link>
+                    <Link to="/" className="logo">ResultPedia</Link>
+                </div>
 
-                <Link to="/login" className='header-links'>
-                    <PersonIcon />
-                </Link>
+                <div>
+                    <Link to="/login">{!isAuthenticated && <div className='header-links'>Login</div>}</Link>
 
-                    {isAuthenticated ? <LogoutIcon className='header-links'  onClick={logMeOut} /> : false}
+                    {isAuthenticated ? <div className='header-links' onClick={logMeOut}>Logout</div> : false}
+                </div>
             </div>
 
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
